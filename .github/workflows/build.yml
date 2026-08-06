@@ -40,7 +40,8 @@ jobs:
           pip install --upgrade cython==0.29.33 buildozer
 
       - name: Clean previous build artifacts
-        run: buildozer clean
+        run: | 
+           rm -rf .buildozer bin
           
       - name: Build APK with Buildozer
         run: |
